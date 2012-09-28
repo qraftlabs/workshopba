@@ -23,7 +23,10 @@ a{font-weight:200;color:#63c0f5;text-shadow:0 0 5px rgba(104,182,255,0.5)}
 .section{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;margin-top:10px;border-bottom:2px dashed #63f800}
 form{padding-bottom:10px;}
 form input[type="email"]{-webkit-border-radius:20px;border-radius:20px;font-size:15px;width:265px;margin-top:16px;padding:6px;text-align:center;font-weight:bolder}
-@media (max-width: 720px){.modules{display:block;width:102.08333333333333%;margin:0 -1.0416666666666665%;*width:102.08333333333333% -correction;*margin:0 -1.0416666666666665% -correction;}
+@media (max-width: 720px){.trainer{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;}
+.trainer img{display:none}
+.trainer .bio{display:inline;position:relative}
+.modules{display:block;width:102.08333333333333%;margin:0 -1.0416666666666665%;*width:102.08333333333333% -correction;*margin:0 -1.0416666666666665% -correction;}
 .modules .module{display:inline;float:left;overflow:hidden;width:47.91666666666667%;margin:0 1.0416666666666665%;*width:47.91666666666667% -correction;*margin:0 1.0416666666666665% -correction;min-height:120px}
 }@media (max-width: 360px){.modules .module{display:inline;float:left;overflow:hidden;width:81.25%;margin:0 1.0416666666666665%;*width:81.25% -correction;*margin:0 1.0416666666666665% -correction;margin-bottom:20px;min-height:100px}
 }
