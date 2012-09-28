@@ -1,0 +1,131 @@
+@import url("http://fonts.googleapis.com/css?family=Press+Start+2P&subset=latin,latin-ext")
+@import 'nib'
+@import 'grid'
+@import 'btn'
+
+columns = 12
+columnWidth = 60
+gutterWidth = 20
+totalWidth = 100%
+
+gray-scale-filter(perc)
+  filter grayscale(perc)
+  -webkit-filter grayscale(perc)
+  -moz-filter grayscale(perc)
+  -ms-filter grayscale(perc)
+  -o-filter grayscale(perc)
+
+body 
+  background #151515 url("../images/bkg.png") 0 0
+  color #eaeaea
+  line-height 1.5
+  font-family Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+  max-width: 960px;
+  margin: 0 auto;
+
+
+header 
+  column 12
+  text-align center
+  border 2px dashed #63F800
+  margin-top 10px
+  h1
+    color #63F800
+    text-shadow 0 0 5px rgba(104, 182, 255, 0.5)
+    font-size: 44px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    content "./ "
+
+.main 
+  column 12
+  padding-bottom 50px
+.modules
+  list-style-type: none;
+  padding-left: 0px
+  row 12
+  .module:before
+    content "./ "
+  .module
+    column 4, 12
+    min-height 110px
+    color #63F800
+    font-family 'Press Start 2P', cursive
+    .desc
+      font-size 14px
+      color white
+      font-family Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace
+h2
+  color #63c0f5
+  text-shadow 0 0 5px rgba(104, 182, 255, 0.5)
+  font-weight 300
+  margin-bottom 0px
+  font-size 34px
+
+a
+  font-weight 200
+  color #63c0f5
+  text-shadow 0 0 5px rgba(104, 182, 255, 0.5)
+
+.trainer
+  column 6
+  line-height 19px
+  padding-bottom: 42px;
+  display block
+  position relative
+  img
+    column 9
+    gray-scale-filter(0%)
+    border-radius 10%
+    box-shadow 3px 3px 4px #000
+  .bio
+    position absolute
+    width 300px
+    padding-left 12px
+    padding-top 60px
+    display none
+    top 0
+    bottom 0
+    left 0
+    right 0
+    box-orient horizontal
+    box-pack center
+    box-align center
+
+.trainer:hover
+  cursor pointer
+  img
+    gray-scale-filter(100%)
+    opacity 0.2
+  .bio
+    display inline
+
+.section
+  column 12
+  margin-top 10px
+  border-bottom 2px dashed #63F800
+
+form
+  padding-bottom 10px
+  input[type="email"]
+    border-radius: 20px;
+    font-size: 15px;
+    width: 265px;
+    margin-top: 16px;
+    padding: 6px;
+    text-align: center;
+    font-weight: bolder;
+
+@media (max-width: 720px)
+  .modules
+    row 12
+    .module
+      column 6, 12
+      min-height 120px
+
+@media (max-width: 360px)
+  .modules
+    .module
+      column 10
+      margin-bottom 20px
+      min-height 100px

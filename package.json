@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-workshop",
+  "version": "0.0.1-7",
+  "description": "el website para el workshop de node en argentina",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "nib": "~0.8.2",
+    "jade": "~0.27.5",
+    "stylus": "~0.29.0",
+    "express": "~3.0.0rc4",
+    "markdown": "~0.4.0",
+    "nodemailer": "~0.3.28"
+  },
+  "subdomain": "workshopba",
+  "engines": {
+    "node": "0.8.x"
+  }
+}
