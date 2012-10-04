@@ -1,7 +1,10 @@
-h2 Quiero mi cupón!
+h2 Registrarme
 .register-form
-  form#register
+  form#register(method="post")
     input#mail(type="email", name="email", placeholder="email:", required)
+    select#category(name="category", required)
+      option Normal
+      option Estudiante
+      option Socio MUG
+      option Viajo desde el interior
     input.btn(type="submit", value="enviar") enviar
-.success(style="display: none")
-  p Listo! te avisaremos a la brevedad.

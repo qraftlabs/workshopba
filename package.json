@@ -1,6 +1,6 @@
 {
   "name": "nodejs-workshop",
-  "version": "0.0.1-16",
+  "version": "0.0.1-21",
   "description": "el website para el workshop de node en argentina",
   "main": "server.js",
   "scripts": {

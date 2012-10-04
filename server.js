@@ -1,5 +1,6 @@
 var path = require("path"),
-  mailer = require("./lib/mailer");
+  mailer = require("./lib/mailer"),
+  generateDineroMailUrl = require("./lib/dineromail");
 
 var express = require("express"),
   stylus = require("stylus"),
@@ -31,12 +32,16 @@ app.get("/", function(req, res){
   res.render("index");
 });
 
-app.post("/register", function(req, res){
-  mailer(req.body.email, function(err){
+app.get("/succeed", function(req, res){
+  res.render("succeed");
+});
+
+app.post("/", function(req, res){
+  mailer(req.body.email, req.body.categoria, function(err){
     if(err){
       res.send(500, err);
     }else{
-      res.json({ok: 1});
+      res.redirect(generateDineroMailUrl(req.body));
     }
   });
 });

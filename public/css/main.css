@@ -22,7 +22,7 @@ a{font-weight:200;color:#63c0f5;text-shadow:0 0 5px rgba(104,182,255,0.5)}
 .trainer:hover .bio{display:inline}
 .section{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;margin-top:10px;border-bottom:2px dashed #63f800}
 form{padding-bottom:10px;}
-form input[type="email"]{-webkit-border-radius:20px;border-radius:20px;font-size:15px;width:265px;margin-top:16px;padding:6px;text-align:center;font-weight:bolder}
+form input[type="email"],form select{font-size:15px;padding:3px}
 @media (max-width: 720px){.trainer{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;}
 .trainer img{display:none}
 .trainer .bio{display:inline;position:relative}
