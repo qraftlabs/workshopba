@@ -6,7 +6,7 @@ var express = require("express"),
   stylus = require("stylus"),
   nib = require("nib"),
   app = express();
-
+ 
 app.configure(function(){
   this.set("views", __dirname + "/views");
   this.set("view engine", "jade");
@@ -37,7 +37,7 @@ app.get("/succeed", function(req, res){
 });
 
 app.post("/", function(req, res){
-  mailer(req.body.email, req.body.categoria, function(err){
+  mailer(req.body.email, req.body.category, function(err){
     if(err){
       res.send(500, err);
     }else{
