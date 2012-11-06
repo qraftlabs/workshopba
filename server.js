@@ -25,6 +25,7 @@ app.configure(function(){
    }
   }));
 
+  this.use(express.compress());
   this.use(express.static(__dirname + "/public"));
   this.use(app.router);
 });
@@ -35,9 +36,9 @@ app.get("/", function(req, res){
       {file: "/photos/IMG_0951.jpg", description: "Noders!"},
       {file: "/photos/IMG_0953.jpg", description: "Matías explicando módulos en node.js con legos"},
       {file: "/photos/IMG_0952.jpg", description: "hora de ejercicios!"},
+      {file: "/photos/IMG_0963.jpg", description: "Damian explicando express.js"},
       {file: "/photos/IMG_0960.jpg", description: "José explicando un ejercicio"},
       {file: "/photos/IMG_0962.jpg", description: "con hambre no se puede pensar"},
-      {file: "/photos/IMG_0963.jpg", description: "Damian explicando express.js"},
       {file: "/photos/IMG_0955.jpg", description: "Matías explicando funcionamiento de require"},
       {file: "/photos/IMG_0969.jpg", description: "Damian explicando funcionamiento de socket.io"},
       {file: "/photos/IMG_0971.jpg", description: "y más ejercicios"}

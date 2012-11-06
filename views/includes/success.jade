@@ -26,7 +26,7 @@ h2 El primer workshop de node en español
     -   }
     - });
 
-p Recibimos muy buenos críticas sobre el evento y esperamos poder volver a repetir la experiencia
+p Recibimos muy buenas críticas y esperamos poder volver a repetir la experiencia
 blockquote
   | La metodología que usaron me pareció bien. Los ejercicios siempre ayudan a entender. Siempre que escribís un código te encontras con algún problema, y lo mejor es que estaban siempre atentos para ayudar.
   span Santiago Leopardo desarrollador en MercadoLibre
@@ -48,8 +48,11 @@ blockquote
   span Juan García estudiante en UTN
 
 :markdown
-  Si te quedaste con ganas o no pudiste asistir, te invitamos a prácticar con los ejercicios y miras las diapositivas en este [enlace](github.com/qraftlabs/node-workshop).
-  
+  Si te quedaste con ganas o no pudiste asistir, te invitamos a prácticar con los ejercicios y mirar las diapositivas en este [enlace](http://github.com/qraftlabs/node-workshop).
+
+
+
+script(src='/js/jquery.slicebox.js') 
 script(type="text/javascript")
   $(function() {
     var Page = (function() {
@@ -123,4 +126,12 @@ script(type="text/javascript")
 
     })();
     Page.init();
+    $(window).load(function(){
+      //wtf? yes this script sucks.
+      setTimeout(function () {
+        $('#sb-slider').css({
+          'max-width': '778px'  
+        });
+      }, 3000);
+    });
   });
