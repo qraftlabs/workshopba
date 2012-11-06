@@ -1,0 +1,126 @@
+h2 El primer workshop de node en español
+:markdown
+  El viernes 2 de noviembre de 2012 llevamos a cabo el primer workshop de node.js en español en Buenos Aires.
+
+#slide-wrapper.slide-wrapper
+  ul#sb-slider.sb-slider
+    each photo in photos
+      li
+        a(href=photo.file, target="_blank")
+          img(src=photo.file, alt=photo.description)
+        div.sb-description
+          h3= photo.description
+
+  #shadow.shadow
+
+  #nav-arrows.nav-arrows
+    a(href="#") Next
+    a(href="#") Previous
+
+  #nav-dots.nav-dots
+    - photos.forEach(function (photo, index){
+    -   if (index === 0){
+      span.nav-dot-current
+    -   } else {
+      span
+    -   }
+    - });
+
+p Recibimos muy buenos críticas sobre el evento y esperamos poder volver a repetir la experiencia
+blockquote
+  | La metodología que usaron me pareció bien. Los ejercicios siempre ayudan a entender. Siempre que escribís un código te encontras con algún problema, y lo mejor es que estaban siempre atentos para ayudar.
+  span Santiago Leopardo desarrollador en MercadoLibre
+
+blockquote
+  | Muy bueno el curso, me gusto la dinámica, el tener que hacer actividades cada 30 minutos como máximo te mantiene activo
+  span Leandro Mettini desarrollador en MercadoLibre
+
+blockquote
+  | Me pareció muy bueno el curso y muy recomendable para cualquier persona que quiera comenzara a ver de que se trata node y todo su entorno.
+  span Andres Lozada Mosto
+
+blockquote
+  | Muy bueno todo!!!! muy buena onda por parte de los disertantes a la hora de resolver los problemas, los ejemplos que se dieron eran  muy claros, todo espectacular!
+  span Cristian Cejas
+
+blockquote
+  | Con respecto al curso me parecio un excelente trabajo de los oradores, la parte de workshop es fundamental, uno no aprende hasta que no se pone a tocar un poco y entiende de que se trata...
+  span Juan García estudiante en UTN
+
+:markdown
+  Si te quedaste con ganas o no pudiste asistir, te invitamos a prácticar con los ejercicios y miras las diapositivas en este [enlace](github.com/qraftlabs/node-workshop).
+  
+script(type="text/javascript")
+  $(function() {
+    var Page = (function() {
+      var $navArrows = $( '#nav-arrows' ).hide(),
+        $navDots = $( '#nav-dots' ).hide(),
+        $nav = $navDots.children( 'span' ),
+        $shadow = $( '#shadow' ).hide(),
+        slicebox = $( '#sb-slider' ).slicebox( {
+          onReady : function() {
+
+            $navArrows.show();
+            $navDots.show();
+            $shadow.show();
+
+          },
+          onBeforeChange : function( pos ) {
+
+            $nav.removeClass( 'nav-dot-current' );
+            $nav.eq( pos ).addClass( 'nav-dot-current' );
+
+          },
+          orientation : 'r',
+          cuboidsRandom : true
+        } ),
+        
+        init = function() {
+
+          initEvents();
+          
+        },
+        initEvents = function() {
+
+          // add navigation events
+          $navArrows.children( ':first' ).on( 'click', function() {
+
+            slicebox.next();
+            return false;
+
+          } );
+
+          $navArrows.children( ':last' ).on( 'click', function() {
+            
+            slicebox.previous();
+            return false;
+
+          } );
+
+          $nav.each( function( i ) {
+          
+            $( this ).on( 'click', function( event ) {
+              
+              var $dot = $( this );
+              
+              if( !slicebox.isActive() ) {
+
+                $nav.removeClass( 'nav-dot-current' );
+                $dot.addClass( 'nav-dot-current' );
+              
+              }
+              
+              slicebox.jump( i + 1 );
+              return false;
+            
+            } );
+            
+          } );
+
+        };
+
+        return { init : init };
+
+    })();
+    Page.init();
+  });

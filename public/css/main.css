@@ -23,6 +23,9 @@ a{font-weight:200;color:#63c0f5;text-shadow:0 0 5px rgba(104,182,255,0.5)}
 .section{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;margin-top:10px;border-bottom:2px dashed #63f800}
 form{padding-bottom:10px;}
 form input[type="email"],form select{font-size:15px;padding:3px}
+.slide-wrapper{position:relative;max-width:640px;width:100%;padding:0 50px;margin:0 auto}
+blockquote{font:italic 1em Georgia,verdana,Helvetica,"Times New Roman",Times,serif;}
+blockquote span{display:block;padding-top:10px;padding-bottom:15px;font:bold 1.1em Georgia,verdana,Helvetica,"Times New Roman",Times,serif}
 @media (max-width: 720px){.trainer{display:inline;float:left;overflow:hidden;width:97.91666666666666%;margin:0 1.0416666666666665%;*width:97.91666666666666% -correction;*margin:0 1.0416666666666665% -correction;}
 .trainer img{display:none}
 .trainer .bio{display:inline;position:relative}
